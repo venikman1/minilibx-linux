@@ -31,6 +31,10 @@
 
 #define	MLX_H
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 void	*mlx_init();
 /*
@@ -131,5 +135,9 @@ int	mlx_mouse_hide(void *mlx_ptr, void *win_ptr);
 int	mlx_mouse_show(void *mlx_ptr, void *win_ptr);
 
 int	mlx_get_screen_size(void *mlx_ptr, int *sizex, int *sizey);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif /* MLX_H */
